@@ -1,0 +1,37 @@
+/**
+ * pong.css
+ *
+ * Copyright (C) 2014 Kano Computing Ltd
+ * License: GNU General Public License v2 http://www.gnu.org/licenses/gpl-2.0.txt
+ *
+ * This file contains styling specific to Pong project
+ */
+
+/* -----------------------------------------------------------------------
+ Menu Dialog
+----------------------------------------------------------------------- */
+
+div.dialog.challenge .playground {
+    width: 480px;
+}
+
+div.dialog.challenge > div {
+    width: 696px;
+}
+
+/* When making the game, an alert is displayed */
+#makingGame {
+    background: rgba(0, 0, 0, 0.7);
+}
+
+#makingGame div {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 32px;
+}
+
+#makingGame div span {
+    color: white;
+    font-size: 35px;
+}

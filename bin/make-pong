@@ -1,0 +1,65 @@
+#!/usr/bin/env python
+
+# make-pong
+#
+# Copyright (C) 2014-2018 Kano Computing Ltd.
+# License: http://www.gnu.org/licenses/gpl-2.0.txt GNU General Public License v2
+#
+# The Pong App implementation
+
+# Before loading anything else, declare a profiling timepoint
+# from kano.profiling import declare_timepoint
+# declare_timepoint("load", True)
+
+
+import os
+import sys
+import subprocess
+
+if __name__ == '__main__' and __package__ is None:
+    dir_path = os.path.abspath(
+        os.path.join(os.path.dirname(__file__), '../../kano-blocks'))
+    if dir_path != '/usr':
+        sys.path.insert(1, dir_path)
+
+
+from kano_blocks.blocks_app import BlocksApp
+
+from kano_profile.tracker import Tracker
+kanotracker = Tracker()
+
+
+class Pong(BlocksApp):
+    app_name = 'make-pong'
+    _app_icon = '/usr/share/kano-desktop/icons/pong.png'
+    _title = 'Make Pong'
+    _challenge_no = 16
+
+    _module_path = os.path.dirname(os.path.realpath(__file__))
+    _index = os.path.join('file://' + _module_path,
+                          '..', 'pong/index.html')
+    _video_filename = 'pong'
+
+    _content_dir = 'Pong-content'
+    _game_window = 'Pong'
+
+    _maximized = True
+
+    def __init__(self):
+        super(Pong, self).__init__()
+
+        self._game_script = os.path.join(self._save_dir, 'pong.py')
+
+    def launch(self):
+        # Take a screenshot of the script in action
+        self._screenshot()
+
+        subprocess.call(['python', self._game_script, '&'])
+
+        return 1
+
+    def on_web_load(self):
+        pass
+
+pong = Pong()
+pong.run()

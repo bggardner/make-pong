@@ -1,0 +1,1294 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<level>
+    <!-- Project 1 - Make -->
+    <project>
+        <step>
+            <position>#runButton</position>
+            <tip>Click &lt;b&gt;Make&lt;/b&gt; to play Pong</tip>
+            <direction>d</direction>
+            <progressor>#runButton</progressor>
+        </step>
+    </project>
+    <!-- Start Ups Projects -->
+    <!-- Project 2 - Colour the board -->
+    <project>
+        <step>
+            <position>div.blocks-tree-start-ups</position>
+            <tip>Start with &lt;b&gt;Startups&lt;/b&gt;</tip>
+            <direction>l</direction>
+            <progressor>buttonPress+div.blocks-tree-start-ups</progressor>
+        </step>
+        <step>
+            <position>g.flyout.svgBlock-pong_board</position>
+            <tip>Grab a &lt;b&gt;board&lt;/b&gt; block, drag it in</tip>
+            <direction>l</direction>
+            <progressor>blockAdd+pong_board</progressor>
+        </step>
+        <step>
+            <position>previousInput+Scene</position>
+            <tip>Use the &lt;b&gt;Scene&lt;/b&gt; dropdown and pick the &lt;b&gt;Forest&lt;/b&gt; background</tip>
+            <direction>l</direction>
+            <progressor>dropdownInputChange+Scene+./media/backgrounds/forest.png</progressor>
+        </step>
+        <step>
+            <position>div.blocks-tree-colour</position>
+            <tip>Now choose a colour for the &lt;b&gt;Lines&lt;/b&gt;</tip>
+            <direction>l</direction>
+            <progressor>buttonPress+div.blocks-tree-colour</progressor>
+        </step>
+        <step>
+            <position>g.flyout.svgBlock-colour_picker</position>
+            <tip>Grab another &lt;b&gt;Colour&lt;/b&gt; block</tip>
+            <direction>l</direction>
+            <progressor>blockAdd+colour_picker</progressor>
+        </step>
+        <step>
+            <position>previousInput+FRAMECOLOUR</position>
+            <tip>Plug it into &lt;b&gt;Board&lt;/b&gt;</tip>
+            <direction>l</direction>
+            <progressor>blockConnect+pong_board+colour_picker</progressor>
+        </step>
+        <step>
+            <position>previous</position>
+            <tip>Now choose a colour for the &lt;b&gt;Lines&lt;/b&gt;</tip>
+            <direction>l</direction>
+            <progressor>colourInputChange+COLOUR</progressor>
+        </step>
+        <step>
+            <position>#runButton</position>
+            <tip>Click &lt;b&gt;Make&lt;/b&gt; to run your code</tip>
+            <direction>d</direction>
+            <progressor>NONE</progressor>
+        </step>
+    </project>
+    <!-- Project 3 - Big ball -->
+    <project>
+        <step>
+            <position>div.blocks-tree-start-ups</position>
+            <tip>Nice work! Now let's use a &lt;b&gt;Startup&lt;/b&gt; function to make a big ball</tip>
+            <direction>l</direction>
+            <progressor>buttonPress+div.blocks-tree-start-ups</progressor>
+        </step>
+        <step>
+            <position>g.flyout.svgBlock-pong_ball</position>
+            <tip>Click the &lt;b&gt;Ball&lt;/b&gt; block and drag it in</tip>
+            <direction>l</direction>
+            <progressor>blockAdd+pong_ball</progressor>
+        </step>
+        <step>
+            <position></position>
+            <tip>Set the &lt;b&gt;Ball size&lt;/b&gt; by clicking and typing</tip>
+            <direction></direction>
+            <progressor>textInputChange+Radius+!==15</progressor>
+        </step>
+        <step>
+            <position>#runButton</position>
+            <tip>Click &lt;b&gt;Make&lt;/b&gt; to build it!</tip>
+            <direction>d</direction>
+            <progressor>NONE</progressor>
+        </step>
+    </project>
+    <!-- Project 4 - Speed ball -->
+    <project>
+        <step>
+            <position>workspace+pong_ball</position>
+            <tip>You've got it! Now click and choose a number for the ball's &lt;b&gt;Speed&lt;/b&gt;</tip>
+            <direction></direction>
+            <progressor>textInputChange+pong_ball+Speed+!==15</progressor>
+        </step>
+        <step>
+            <position>#runButton</position>
+            <tip>Click &lt;b&gt;Make&lt;/b&gt; to see your code come to life</tip>
+            <direction>d</direction>
+            <progressor>NONE</progressor>
+        </step>
+    </project>
+    <!-- Project 5 - Crazy Ball -->
+    <project>
+        <step>
+            <position>div.blocks-tree-setters</position>
+            <tip>&lt;b&gt;Setter&lt;/b&gt; plus &lt;b&gt;Getter&lt;/b&gt; = crazy ball! First, click on the &lt;b&gt;Setters&lt;/b&gt; tab</tip>
+            <direction>l</direction>
+            <progressor>buttonPress+div.blocks-tree-setters</progressor>
+        </step>
+        <step>
+            <position>g.flyout.svgBlock-pong_ballSizeSetter</position>
+            <tip>Choose &lt;b&gt;Ball size&lt;/b&gt;</tip>
+            <direction>l</direction>
+            <progressor>blockAdd+pong_ballSizeSetter</progressor>
+        </step>
+        <step>
+            <position>div.blocks-tree-getters</position>
+            <tip>Click on the &lt;b&gt;Getters&lt;/b&gt; tab</tip>
+            <direction>l</direction>
+            <progressor>buttonPress+div.blocks-tree-getters</progressor>
+        </step>
+        <step>
+            <position>g.flyout.svgBlock-pong_ballPosition</position>
+            <tip>Grab &lt;b&gt;Ball position&lt;/b&gt;</tip>
+            <direction>l</direction>
+            <progressor>blockAdd+pong_ballPosition</progressor>
+        </step>
+        <step>
+            <position>previousInput+NUM</position>
+            <tip>This measures how far the ball is from the left of the board. Add it to the &lt;b&gt;Setter&lt;/b&gt;</tip>
+            <direction>l</direction>
+            <progressor>blockConnect+pong_ballSizeSetter+pong_ballPosition</progressor>
+        </step>
+        <step>
+            <position>#runButton</position>
+            <tip>Click &lt;b&gt;Make&lt;/b&gt;. Now the ball's &lt;b&gt;Size&lt;/b&gt; will be set by its x position</tip>
+            <direction>d</direction>
+            <progressor>NONE</progressor>
+        </step>
+    </project>
+    <!-- Project 6 - Name your game -->
+    <project>
+        <step>
+            <position>div.blocks-tree-start-ups</position>
+            <tip>Name your creation with a &lt;b&gt;Startup&lt;/b&gt; block</tip>
+            <direction>l</direction>
+            <progressor>buttonPress+div.blocks-tree-start-ups</progressor>
+        </step>
+        <step>
+            <position>g.flyout.svgBlock-pong_title</position>
+            <tip>Drag in the &lt;b&gt;Title&lt;/b&gt; block</tip>
+            <direction>l</direction>
+            <progressor>blockAdd+pong_title</progressor>
+        </step>
+        <step>
+            <position></position>
+            <tip>Change the name to anything you want!</tip>
+            <direction>l</direction>
+            <progressor>textInputChange+Title+!==0</progressor>
+        </step>
+        <step>
+            <position>#runButton</position>
+            <tip>Click &lt;b&gt;Make&lt;/b&gt;!</tip>
+            <direction>d</direction>
+            <progressor>NONE</progressor>
+        </step>
+    </project>
+
+    <!-- If event, do -->
+    <!-- Project 7 - Instant rebound -->
+    <project>
+        <step>
+            <position>div.blocks-tree-logic</position>
+            <tip>Want to make some new rules? We need &lt;b&gt;Logic&lt;/b&gt; blocks</tip>
+            <direction>l</direction>
+            <progressor>buttonPress+div.blocks-tree-logic</progressor>
+        </step>
+        <step>
+            <position>g.flyout.svgBlock-controls_if</position>
+            <tip>The &lt;b&gt;if-do&lt;/b&gt; block makes decisions – &lt;b&gt;if&lt;/b&gt; this, then &lt;b&gt;do&lt;/b&gt; that. Drag it in</tip>
+            <direction>l</direction>
+            <progressor>blockAdd+controls_if</progressor>
+        </step>
+        <step>
+            <position>div.blocks-tree-events</position>
+            <tip>Click on &lt;b&gt;Events&lt;/b&gt;. These plug into &lt;b&gt;if&lt;/b&gt;, and trigger the &lt;b&gt;do&lt;/b&gt; </tip>
+            <direction>l</direction>
+            <progressor>buttonPress+div.blocks-tree-events</progressor>
+        </step>
+        <step>
+            <position>g.flyout.svgBlock-pong_keyPressed</position>
+            <tip>Grab the &lt;b&gt;Key Pressed&lt;/b&gt; block</tip>
+            <direction>l</direction>
+            <progressor>blockAdd+pong_keyPressed</progressor>
+        </step>
+        <step>
+            <position>previousInput+IF0</position>
+            <tip>Plug it in as &lt;b&gt;if&lt;b&gt;</tip>
+            <direction>l</direction>
+            <progressor>blockConnect+controls_if+pong_keyPressed</progressor>
+        </step>
+        <step>
+            <position>div.blocks-tree-actions</position>
+            <tip>Now we need an &lt;b&gt;Action&lt;/b&gt; to &lt;b&gt;do&lt;/b&gt;. Click on &lt;b&gt;Actions&lt;/b&gt;</tip>
+            <direction>l</direction>
+            <progressor>buttonPress+div.blocks-tree-actions</progressor>
+        </step>
+        <step>
+            <position>g.flyout.svgBlock-pong_rebound</position>
+            <tip>We want to do &lt;b&gt;Rebound&lt;/b&gt; if the key is pressed</tip>
+            <direction>l</direction>
+            <progressor>blockAdd+pong_rebound</progressor>
+        </step>
+        <step>
+            <position>previous^Input+DO0</position>
+            <tip>Clip in &lt;b&gt;Rebound&lt;/b&gt; as the &lt;b&gt;do&lt;/b&gt;</tip>
+            <direction>l</direction>
+            <progressor>blockConnect+controls_if+pong_rebound</progressor>
+        </step>
+        <step>
+            <position>#runButton</position>
+            <tip>Click &lt;b&gt;Make&lt;/b&gt;</tip>
+            <direction>d</direction>
+            <progressor>NONE</progressor>
+        </step>
+    </project>
+    <!-- Project 8 - Instant win -->
+    <project>
+        <step>
+            <position>div.blocks-tree-logic</position>
+            <tip>Let's make another cheat. Start with a &lt;b&gt;Logic&lt;/b&gt; block</tip>
+            <direction>l</direction>
+            <progressor>buttonPress+div.blocks-tree-logic</progressor>
+        </step>
+        <step>
+            <position>g.flyout.svgBlock-controls_if</position>
+            <tip>Grab the &lt;b&gt;if-do&lt;/b&gt; block</tip>
+            <direction>l</direction>
+            <progressor>blockAdd+controls_if</progressor>
+        </step>
+        <step>
+            <position>div.blocks-tree-events</position>
+            <tip>Now we need an event to activate the &lt;b&gt;if-do&lt;/b&gt;</tip>
+            <direction>l</direction>
+            <progressor>buttonPress+div.blocks-tree-events</progressor>
+        </step>
+        <step>
+            <position>g.flyout.svgBlock-pong_keyPressed</position>
+            <tip>Grab a &lt;b&gt;Key Pressed&lt;/b&gt; event...</tip>
+            <direction>l</direction>
+            <progressor>blockAdd+pong_keyPressed</progressor>
+        </step>
+        <step>
+            <position>previousInput+IF0</position>
+            <tip>Add it to the &lt;b&gt;if&lt;/b&gt; condition</tip>
+            <direction>l</direction>
+            <progressor>blockConnect+controls_if+pong_keyPressed</progressor>
+        </step>
+        <step>
+            <position>div.blocks-tree-actions</position>
+            <tip>Click on &lt;b&gt;Actions&lt;/b&gt;</tip>
+            <direction>l</direction>
+            <progressor>buttonPress+div.blocks-tree-actions</progressor>
+        </step>
+        <step>
+            <position>g.flyout.svgBlock-pong_win</position>
+            <tip>Find the &lt;b&gt;Win&lt;/b&gt; block</tip>
+            <direction>l</direction>
+            <progressor>blockAdd+pong_win</progressor>
+        </step>
+        <step>
+            <position>previous^Input+DO0</position>
+            <tip>Make it the &lt;b&gt;Do&lt;/b&gt;</tip>
+            <direction>l</direction>
+            <progressor>blockConnect+controls_if+pong_win</progressor>
+        </step>
+        <step>
+            <position>#runButton</position>
+            <tip>Click &lt;b&gt;Make&lt;/b&gt; to run your code, then press your chosen Key</tip>
+            <direction>d</direction>
+            <progressor>NONE</progressor>
+        </step>
+    </project>
+    <!-- Project 9 - Disco ball -->
+    <project>
+        <step>
+            <position>div.blocks-tree-logic</position>
+            <tip>Now we'll use &lt;b&gt;if-do&lt;/b&gt; to make game powerups!</tip>
+            <direction>l</direction>
+            <progressor>buttonPress+div.blocks-tree-logic</progressor>
+        </step>
+        <step>
+            <position>g.flyout.svgBlock-controls_if</position>
+            <tip>Grab the &lt;b&gt;if-do&lt;/b&gt;; we call this a "conditional"</tip>
+            <direction>l</direction>
+            <progressor>blockAdd+controls_if</progressor>
+        </step>
+        <step>
+            <position>div.blocks-tree-events</position>
+            <tip>Go to &lt;b&gt;Events&lt;/b&gt;, which activate the &lt;b&gt;if-do&lt;/b&gt;</tip>
+            <direction>l</direction>
+            <progressor>buttonPress+div.blocks-tree-events</progressor>
+        </step>
+        <step>
+            <position>g.flyout.svgBlock-pong_collision</position>
+            <tip>Grab the &lt;b&gt;hit&lt;/b&gt; block</tip>
+            <direction>l</direction>
+            <progressor>blockAdd+pong_collision</progressor>
+        </step>
+        <step>
+            <position>previousInput+IF0</position>
+            <tip>Plug it into '&lt;b&gt;if&lt;/b&gt;' as the condition</tip>
+            <direction>l</direction>
+            <progressor>blockConnect+controls_if+pong_collision</progressor>
+        </step>
+        <step>
+            <position>div.blocks-tree-setters</position>
+            <tip>Now we need a &lt;b&gt;Setter&lt;/b&gt; for the '&lt;b&gt;do&lt;/b&gt;'</tip>
+            <direction>l</direction>
+            <progressor>buttonPress+div.blocks-tree-setters</progressor>
+        </step>
+        <step>
+            <position>g.flyout.svgBlock-pong_colourSetter</position>
+            <tip>Grab the &lt;b&gt;set colour&lt;/b&gt; block</tip>
+            <direction>l</direction>
+            <progressor>blockAdd+pong_colourSetter</progressor>
+        </step>
+        <step>
+            <position>previous^Input+DO0</position>
+            <tip>Add it to &lt;b&gt;do&lt;/b&gt;, so that &lt;b&gt;colour&lt;/b&gt; will be set if there is a &lt;b&gt;hit&lt;/b&gt;.</tip>
+            <direction>l</direction>
+            <progressor>blockConnect+controls_if+pong_colourSetter</progressor>
+        </step>
+        <step>
+            <position>div.blocks-tree-colour</position>
+            <tip>Now we need to choose a &lt;b&gt;colour&lt;/b&gt;.</tip>
+            <direction>l</direction>
+            <progressor>buttonPress+div.blocks-tree-colour</progressor>
+        </step>
+        <step>
+            <position>g.flyout.svgBlock-colour_random</position>
+            <tip>Grab the &lt;b&gt;random colour&lt;/b&gt; block</tip>
+            <direction>l</direction>
+            <progressor>blockAdd+colour_random</progressor>
+        </step>
+        <step>
+            <position>previousInput+COLOUR</position>
+            <tip>Plug it into the &lt;b&gt;setter&lt;/b&gt;, which will now set a &lt;b&gt;random colour&lt;/b&gt; when the program is run</tip>
+            <direction>l</direction>
+            <progressor>blockConnect+pong_colourSetter+colour_random</progressor>
+        </step>
+        <step>
+            <position>div.blocks-tree-setters</position>
+            <tip>Nice! Let's do the same for Player 2</tip>
+            <direction>l</direction>
+            <progressor>buttonPress+div.blocks-tree-setters</progressor>
+        </step>
+        <step>
+            <position>g.flyout.svgBlock-pong_colourSetter</position>
+            <tip>Grab another &lt;b&gt;set colour&lt;/b&gt; block</tip>
+            <direction>l</direction>
+            <progressor>blockAdd+pong_colourSetter</progressor>
+        </step>
+        <step>
+            <position>previous^Input+nextConnection</position>
+            <tip>Add it to &lt;b&gt;do&lt;/b&gt;</tip>
+            <direction>l</direction>
+            <progressor>blockConnect+pong_colourSetter+pong_colourSetter</progressor>
+        </step>
+
+        <step>
+            <position>previous</position>
+            <tip>Click the dropdown and change its parameter to Player 2</tip>
+            <direction>l</direction>
+            <progressor>dropdownInputChange+ITEM+PLAYER2</progressor>
+        </step>
+
+        <step>
+            <position>div.blocks-tree-colour</position>
+            <tip>Click on &lt;b&gt;Colour&lt;/b&gt;</tip>
+            <direction>l</direction>
+            <progressor>buttonPress+div.blocks-tree-colour</progressor>
+        </step>
+        <step>
+            <position>g.flyout.svgBlock-colour_random</position>
+            <tip>Grab another &lt;b&gt;random colour&lt;/b&gt; block</tip>
+            <direction>l</direction>
+            <progressor>blockAdd+colour_random</progressor>
+        </step>
+        <step>
+            <!-- Ugly, but no obvious way to point to correct block -->
+            <position>previous^Child+DO0+previousChild+nextConnection+previousInput+COLOUR</position>
+            <tip>Plug into the Player 2 set colour block</tip>
+            <direction>l</direction>
+            <progressor>blockConnect+pong_colourSetter+colour_random</progressor>
+        </step>
+         <step>
+            <position>div.blocks-tree-setters</position>
+            <tip>Finally, set the &lt;b&gt;ball colour&lt;/b&gt; to &lt;b&gt;random&lt;/b&gt;</tip>
+            <direction>l</direction>
+            <progressor>buttonPress+div.blocks-tree-setters</progressor>
+        </step>
+        <step>
+            <position>g.flyout.svgBlock-pong_colourSetter</position>
+            <tip>Now let's make the disco ball. Grab a third &lt;b&gt;set colour&lt;/b&gt; block</tip>
+            <direction>l</direction>
+            <progressor>blockAdd+pong_colourSetter</progressor>
+        </step>
+        <step>
+            <position>previous^Input+nextConnection</position>
+            <tip>Add it to &lt;b&gt;do&lt;/b&gt;</tip>
+            <direction>l</direction>
+            <progressor>blockConnect+pong_colourSetter+pong_colourSetter</progressor>
+        </step>
+        <step>
+            <position>previous</position>
+            <tip>Change the dropdown to Ball.</tip>
+            <direction>l</direction>
+            <progressor>dropdownInputChange+ITEM+BALL</progressor>
+        </step>
+        <step>
+            <position>div.blocks-tree-colour</position>
+            <tip>Then get another &lt;b&gt;colour&lt;/b&gt;.</tip>
+            <direction>l</direction>
+            <progressor>buttonPress+div.blocks-tree-colour</progressor>
+        </step>
+        <step>
+            <position>g.flyout.svgBlock-colour_random</position>
+            <tip>&lt;b&gt;Random colour&lt;/b&gt; again...</tip>
+            <direction>l</direction>
+            <progressor>blockAdd+colour_random</progressor>
+        </step>
+        <step>
+            <!-- Ugly, but no obvious way to point to correct block -->
+            <position>previous^Child+DO0+previousChild+nextConnection+previousChild+nextConnection+previousInput+COLOUR</position>
+            <tip>Plug into &lt;b&gt;Ball&lt;/b&gt;</tip>
+            <direction>l</direction>
+            <progressor>blockConnect+pong_colourSetter+colour_random</progressor>
+        </step>
+        <step>
+            <position>#runButton</position>
+            <tip>Phew! Now let's &lt;b&gt;Make&lt;/b&gt; our program, setting three variables randomly</tip>
+            <direction>d</direction>
+            <progressor>NONE</progressor>
+        </step>
+    </project>
+    <!-- Project 10 - 10 pts win -->
+    <project>
+        <step>
+            <position>div.blocks-tree-logic</position>
+            <tip>Let's code in a win condition! We can make it so you need 10 points to win</tip>
+            <direction>l</direction>
+            <progressor>buttonPress+div.blocks-tree-logic</progressor>
+        </step>
+        <step>
+            <position>g.flyout.svgBlock-controls_if</position>
+            <tip>Grab the &lt;b&gt;if-do&lt;/b&gt;</tip>
+            <direction>l</direction>
+            <progressor>blockAdd+controls_if</progressor>
+        </step>
+        <step>
+            <position>div.blocks-tree-logic</position>
+            <tip>Now grab a new type of &lt;b&gt;Logic&lt;/b&gt; block: &lt;b&gt;Comparison&lt;/b&gt;</tip>
+            <direction>l</direction>
+            <progressor>buttonPress+div.blocks-tree-logic</progressor>
+        </step>
+        <step>
+            <position>g.flyout.svgBlock-logic_compare</position>
+            <tip>This block compares two things. If the &lt;b&gt;Comparison&lt;/b&gt; makes sense, it activates the &lt;b&gt;if-do&lt;/b&gt;</tip>
+            <direction>l</direction>
+            <progressor>blockAdd+logic_compare</progressor>
+        </step>
+        <step>
+            <position>previousInput+IF0</position>
+            <tip>Add the &lt;b&gt;Comparison&lt;/b&gt; as the &lt;b&gt;if&lt;/b&gt;</tip>
+            <direction>l</direction>
+            <progressor>blockConnect+controls_if+logic_compare</progressor>
+        </step>
+        <step>
+            <position>div.blocks-tree-getters</position>
+            <tip>Click on &lt;b&gt;Getters&lt;/b&gt;</tip>
+            <direction>l</direction>
+            <progressor>buttonPress+div.blocks-tree-getters</progressor>
+        </step>
+        <step>
+            <position>g.flyout.svgBlock-pong_scoreGetter</position>
+            <tip>We want to check if the score equals 10. So grab the &lt;b&gt;Getter&lt;/b&gt; for &lt;b&gt;Score&lt;/b&gt;</tip>
+            <direction>l</direction>
+            <progressor>blockAdd+pong_scoreGetter</progressor>
+        </step>
+        <step>
+            <position>previousInput+A</position>
+            <tip>Add it to the &lt;b&gt;=&lt;/b&gt;</tip>
+            <direction>l</direction>
+            <progressor>blockConnect+logic_compare+pong_scoreGetter</progressor>
+        </step>
+        <step>
+            <position>div.blocks-tree-numbers</position>
+            <tip>Now we need our winning number. Click &lt;b&gt;Numbers&lt;/b&gt;</tip>
+            <direction>l</direction>
+            <progressor>buttonPress+div.blocks-tree-numbers</progressor>
+        </step>
+        <step>
+            <position>g.flyout.svgBlock-math_number</position>
+            <tip>Grab a &lt;b&gt;Number&lt;/b&gt; block</tip>
+            <direction>l</direction>
+            <progressor>blockAdd+math_number</progressor>
+        </step>
+        <step>
+            <position>previous^Input+B</position>
+            <tip>Add it to the other side of the &lt;b&gt;Comparison&lt;/b&gt;. now checks if the score = 0</tip>
+            <direction>l</direction>
+            <progressor>blockConnect+logic_compare+math_number</progressor>
+        </step>
+        <step>
+            <position>previous</position>
+            <tip>Change it to check if the score is 10</tip>
+            <direction>l</direction>
+            <progressor>textInputChange+NUM+10</progressor>
+        </step>
+        <step>
+            <position>div.blocks-tree-actions</position>
+            <tip>Then go to &lt;b&gt;Actions&lt;/b&gt;</tip>
+            <direction>l</direction>
+            <progressor>buttonPress+div.blocks-tree-actions</progressor>
+        </step>
+
+        <step>
+            <position>g.flyout.svgBlock-pong_win</position>
+            <tip>Almost there! Grab the &lt;b&gt;Win&lt;/b&gt; block</tip>
+            <direction>l</direction>
+            <progressor>blockAdd+pong_win</progressor>
+        </step>
+        <step>
+            <position>previous^^Input+DO0</position>
+            <tip>Add &lt;b&gt;Win&lt;/b&gt; as the &lt;b&gt;do&lt;/b&gt;</tip>
+            <direction>l</direction>
+            <progressor>blockConnect+controls_if+pong_win</progressor>
+        </step>
+        <step>
+            <position>#runButton</position>
+            <tip>&lt;b&gt;Make&lt;/b&gt; it happen!</tip>
+            <direction>d</direction>
+            <progressor>NONE</progressor>
+        </step>
+    </project>
+    <!-- Project 11 - Make it noisy -->
+    <project>
+        <step>
+            <position>div.blocks-tree-logic</position>
+            <tip>Whats a game without sound affects?! Click on &lt;b&gt;Logic&lt;/b&gt;</tip>
+            <direction>l</direction>
+            <progressor>buttonPress+div.blocks-tree-logic</progressor>
+        </step>
+        <step>
+            <position>g.flyout.svgBlock-controls_if</position>
+            <tip>Grab an &lt;b&gt;if do&lt;/b&gt;</tip>
+            <direction>l</direction>
+            <progressor>blockAdd+controls_if</progressor>
+        </step>
+        <step>
+            <position>div.blocks-tree-events</position>
+            <tip>Go to &lt;b&gt;Events&lt;/b&gt;</tip>
+            <direction>l</direction>
+            <progressor>buttonPress+div.blocks-tree-events</progressor>
+        </step>
+        <step>
+            <position>g.flyout.svgBlock-pong_collision</position>
+            <tip>Grab &lt;b&gt;Hit&lt;/b&gt; - let’s make a sound with every hit</tip>
+            <direction>l</direction>
+            <progressor>blockAdd+pong_collision</progressor>
+        </step>
+        <step>
+            <position>previousInput+IF0</position>
+            <tip>Plug it into the &lt;b&gt;If&lt;/b&gt;</tip>
+            <direction>l</direction>
+            <progressor>blockConnect+controls_if+pong_collision</progressor>
+        </step>
+        <step>
+            <position>div.blocks-tree-actions</position>
+            <tip>Now go to &lt;b&gt;Actions&lt;/b&gt;</tip>
+            <direction>l</direction>
+            <progressor>buttonPress+div.blocks-tree-actions</progressor>
+        </step>
+        <step>
+            <position>g.flyout.svgBlock-pong_actionSound</position>
+            <tip>Grab a &lt;b&gt;Sound&lt;/b&gt; block</tip>
+            <direction>l</direction>
+            <progressor>blockAdd+pong_actionSound</progressor>
+        </step>
+        <step>
+            <position>previous^Input+DO0</position>
+            <tip>Plug it in as the &lt;b&gt;do&lt;/b&gt;</tip>
+            <direction>l</direction>
+            <progressor>blockConnect+controls_if+pong_actionSound</progressor>
+        </step>
+        <step>
+            <position>previous</position>
+            <tip>Select &lt;b&gt;Plink&lt;/b&gt; from the drop down</tip>
+            <direction>l</direction>
+            <progressor>dropdownInputChange+SOUND+./media/sound_fx/plink.wav</progressor>
+        </step>
+        <step>
+            <position>#runButton</position>
+            <tip>Click &lt;b&gt;Make&lt;/b&gt;</tip>
+            <direction>d</direction>
+            <progressor>NONE</progressor>
+        </step>
+    </project>
+    <!-- Project 12 - Invisible wall -->
+    <project>
+        <step>
+            <position>div.blocks-tree-logic</position>
+            <tip>Now we'll make an invisible wall in the middle! Grab an &lt;b&gt;if-do&lt;/b&gt;</tip>
+            <direction>l</direction>
+            <progressor>buttonPress+div.blocks-tree-logic</progressor>
+        </step>
+        <step>
+            <position>g.flyout.svgBlock-controls_if</position>
+            <tip>Grab an &lt;b&gt;if-do&lt;/b&gt;</tip>
+            <direction>l</direction>
+            <progressor>blockAdd+controls_if</progressor>
+        </step>
+        <step>
+            <position>div.blocks-tree-logic</position>
+            <tip>Grab a &lt;b&gt;comparison&lt;/b&gt;</tip>
+            <direction>l</direction>
+            <progressor>buttonPress+div.blocks-tree-logic</progressor>
+        </step>
+        <step>
+            <position>g.flyout.svgBlock-logic_compare</position>
+            <tip>Grab a &lt;b&gt;comparison&lt;/b&gt;</tip>
+            <direction>l</direction>
+            <progressor>blockAdd+logic_compare</progressor>
+        </step>
+        <step>
+            <position>previousInput+IF0</position>
+            <tip>Add one of the = &lt;b&gt;Comparison's&lt;/b&gt; as the &lt;b&gt;if&lt;/b&gt;</tip>
+            <direction>l</direction>
+            <progressor>blockConnect+controls_if+logic_compare</progressor>
+        </step>
+        <step>
+            <position>previous</position>
+            <tip>Choose &lt;b&gt;&lt;&lt;/b&gt; from the dropdown</tip>
+            <direction>l</direction>
+            <progressor>dropdownInputChange+OP+LT</progressor>
+        </step>
+        <step>
+            <position>div.blocks-tree-getters</position>
+            <tip>Go to &lt;b&gt;Getters&lt;/b&gt;</tip>
+            <direction>l</direction>
+            <progressor>buttonPress+div.blocks-tree-getters</progressor>
+        </step>
+        <step>
+            <position>g.flyout.svgBlock-pong_ballPosition</position>
+            <tip>Grab &lt;b&gt;Ball Position&lt;/b&gt; block</tip>
+            <direction>l</direction>
+            <progressor>blockAdd+pong_ballPosition</progressor>
+        </step>
+        <step>
+            <position>previousInput+A</position>
+            <tip>Add to the left of &lt;b&gt;&lt;&lt;/b&gt;</tip>
+            <direction>l</direction>
+            <progressor>blockConnect+logic_compare+pong_ballPosition</progressor>
+        </step>
+        <step>
+            <position>div.blocks-tree-getters</position>
+            <tip>Then click on the &lt;b&gt;Getters&lt;/b&gt; tab</tip>
+            <direction>l</direction>
+            <progressor>buttonPress+div.blocks-tree-getters</progressor>
+        </step>
+        <step>
+            <position>g.flyout.svgBlock-pong_arenaGetter</position>
+            <tip>Grab the &lt;b&gt;Middle Point&lt;/b&gt; block, which is where we'll put our wall</tip>
+            <direction>l</direction>
+            <progressor>blockAdd+pong_arenaGetter</progressor>
+        </step>
+        <step>
+            <position>previous^Input+B</position>
+            <tip>Add to the right of &lt;b&gt;&lt;&lt;/b&gt;</tip>
+            <direction>l</direction>
+            <progressor>blockConnect+logic_compare+pong_arenaGetter</progressor>
+        </step>
+        <step>
+            <position>div.blocks-tree-actions</position>
+            <tip>Now we need an &lt;b&gt;Action&lt;/b&gt; so that the ball rebounds when it hits the wall!</tip>
+            <direction>l</direction>
+            <progressor>buttonPress+div.blocks-tree-actions</progressor>
+        </step>
+        <step>
+            <position>g.flyout.svgBlock-pong_rebound</position>
+            <tip>Grab a &lt;b&gt;Rebound&lt;/b&gt; block</tip>
+            <direction>l</direction>
+            <progressor>blockAdd+pong_rebound</progressor>
+        </step>
+        <step>
+            <position>previous^^Input+DO0</position>
+            <tip>Add it to the &lt;b&gt;do&lt;/b&gt;</tip>
+            <direction>l</direction>
+            <progressor>blockConnect+controls_if+pong_rebound</progressor>
+        </step>
+        <step>
+            <position>#runButton</position>
+            <tip>&lt;b&gt;Make&lt;/b&gt; it!</tip>
+            <direction>d</direction>
+            <progressor>NONE</progressor>
+        </step>
+    </project>
+    <!-- Project 13 - Paddle shrink -->
+    <project>
+        <step>
+            <position>div.blocks-tree-logic</position>
+            <tip>Ahhh the  shrinking paddle cheat! For rules, we need &lt;b&gt;Logic&lt;/b&gt;</tip>
+            <direction>l</direction>
+            <progressor>buttonPress+div.blocks-tree-logic</progressor>
+        </step>
+        <step>
+            <position>g.flyout.svgBlock-controls_if</position>
+            <tip>Grab an &lt;b&gt;if-do&lt;/b&gt;</tip>
+            <direction>l</direction>
+            <progressor>blockAdd+controls_if</progressor>
+        </step>
+        <step>
+            <position>div.blocks-tree-events</position>
+            <tip>Let's make it shrink when a goal is scored. Grab an &lt;b&gt;Event&lt;/b&gt;</tip>
+            <direction>l</direction>
+            <progressor>buttonPress+div.blocks-tree-events</progressor>
+        </step>
+        <step>
+            <position>g.flyout.svgBlock-pong_goal</position>
+            <tip>Grab the &lt;b&gt;Goal&lt;/b&gt; block</tip>
+            <direction>l</direction>
+            <progressor>blockAdd+pong_goal</progressor>
+        </step>
+        <step>
+            <position>previousInput+IF0</position>
+            <tip>Add Goal as the &lt;b&gt;if&lt;/b&gt; condition</tip>
+            <direction>l</direction>
+            <progressor>blockConnect+controls_if+pong_goal</progressor>
+        </step>
+        <step>
+            <position>div.blocks-tree-setters</position>
+            <tip>Now look for your &lt;b&gt;Setter&lt;/b&gt;</tip>
+            <direction>l</direction>
+            <progressor>buttonPress+div.blocks-tree-setters</progressor>
+        </step>
+        <step>
+            <position>g.flyout.svgBlock-pong_paddleSizeSetter</position>
+            <tip>Grab the &lt;b&gt;Paddle Size&lt;/b&gt; block</tip>
+            <direction>l</direction>
+            <progressor>blockAdd+pong_paddleSizeSetter</progressor>
+        </step>
+        <step>
+            <position>previous^Input+DO0</position>
+            <tip>Add to the &lt;b&gt;if&lt;/b&gt;</tip>
+            <direction>l</direction>
+            <progressor>blockConnect+controls_if+pong_paddleSizeSetter</progressor>
+        </step>
+        <step>
+            <position>previous</position>
+            <tip>Select &lt;b&gt;Player 2&lt;/b&gt;</tip>
+            <direction>l</direction>
+            <progressor>dropdownInputChange+PLAYER+PLAYER2</progressor>
+        </step>
+        <step>
+            <position>div.blocks-tree-numbers</position>
+            <tip>Now we need a number, to shrink the paddle by half with each hit</tip>
+            <direction>l</direction>
+            <progressor>buttonPress+div.blocks-tree-numbers</progressor>
+        </step>
+        <step>
+            <position>g.flyout.svgBlock-math_arithmetic</position>
+            <tip>Grab the &lt;b&gt;Math&lt;/b&gt; block. It has a +, but we can change that to divide</tip>
+            <direction>l</direction>
+            <progressor>blockAdd+math_arithmetic</progressor>
+        </step>
+        <step>
+            <position>previous</position>
+            <tip>Plug the &lt;b&gt;Math&lt;/b&gt; block into the &lt;b&gt;Paddle Size Setter&lt;/b&gt;</tip>
+            <direction>l</direction>
+            <progressor>blockConnect+pong_paddleSizeSetter+math_arithmetic</progressor>
+        </step>
+        <step>
+            <position>previous</position>
+            <tip>Select &lt;b&gt;divide&lt;/b&gt; from the dropdown</tip>
+            <direction>l</direction>
+            <progressor>dropdownInputChange+OP+DIVIDE</progressor>
+        </step>
+        <step>
+            <position>div.blocks-tree-getters</position>
+            <tip>Now we need a &lt;b&gt;Getter&lt;/b&gt;, for the paddle's current size</tip>
+            <direction>l</direction>
+            <progressor>buttonPress+div.blocks-tree-getters</progressor>
+        </step>
+        <step>
+            <position>g.flyout.svgBlock-pong_paddleSizeGetter</position>
+            <tip>Grab the &lt;b&gt;Paddle Size Getter&lt;/b&gt;</tip>
+            <direction>l</direction>
+            <progressor>blockAdd+pong_paddleSizeGetter</progressor>
+        </step>
+        <step>
+            <position>previousInput+A</position>
+            <tip>Plug into the &lt;b&gt;Math&lt;/b&gt; block</tip>
+            <direction>l</direction>
+            <progressor>blockConnect+math_arithmetic+pong_paddleSizeGetter</progressor>
+        </step>
+        <step>
+            <position>previous</position>
+            <tip>Make sure you're getting &lt;b&gt;Player 2&lt;/b&gt; size</tip>
+            <direction>l</direction>
+            <progressor>dropdownInputChange+PLAYER+PLAYER2</progressor>
+        </step>
+        <step>
+            <position>div.blocks-tree-numbers</position>
+            <tip>This program would set it to its current size. That's no fun! Go to &lt;b&gt;Numbers&lt;/b&gt;</tip>
+            <direction>l</direction>
+            <progressor>buttonPress+div.blocks-tree-numbers</progressor>
+        </step>
+        <step>
+            <position>g.flyout.svgBlock-math_number</position>
+            <tip>Choose a &lt;b&gt;Number&lt;/b&gt; block. This will be what we divide the size by</tip>
+            <direction>l</direction>
+            <progressor>blockAdd+math_number</progressor>
+        </step>
+        <step>
+            <position>previous^Input+B</position>
+            <tip>Add it to the &lt;b&gt;Math&lt;/b&gt; block</tip>
+            <direction>l</direction>
+            <progressor>blockConnect+math_arithmetic+math_number</progressor>
+        </step>
+         <step>
+            <position>previous</position>
+            <tip>Divide &lt;b&gt;Paddle size&lt;/b&gt; by 2</tip>
+            <direction>l</direction>
+            <progressor>textInputChange+NUM+2</progressor>
+        </step>
+         <step>
+            <position>#runButton</position>
+            <tip>&lt;b&gt;Make&lt;/b&gt; it!</tip>
+            <direction>d</direction>
+            <progressor>NONE</progressor>
+        </step>
+    </project>
+    <!-- Project 14 - Turbo mode -->
+    <project>
+        <step>
+            <position>div.blocks-tree-logic</position>
+            <tip>Now we'll make the ball go turbo with each hit. Click on &lt;b&gt;Logic&lt;/b&gt;</tip>
+            <direction>l</direction>
+            <progressor>buttonPress+div.blocks-tree-logic</progressor>
+        </step>
+        <step>
+            <position>g.flyout.svgBlock-controls_if</position>
+            <tip>Grab an &lt;b&gt;if-do&lt;/b&gt; block</tip>
+            <direction>l</direction>
+            <progressor>blockAdd+controls_if</progressor>
+        </step>
+        <step>
+            <position>div.blocks-tree-events</position>
+            <tip>Click on the &lt;b&gt;Events&lt;/b&gt; tab</tip>
+            <direction>l</direction>
+            <progressor>buttonPress+div.blocks-tree-events</progressor>
+        </step>
+        <step>
+            <position>g.flyout.svgBlock-pong_collision</position>
+            <tip>We should trigger this with a &lt;b&gt;Hit&lt;/b&gt;</tip>
+            <direction>l</direction>
+            <progressor>blockAdd+pong_collision</progressor>
+        </step>
+        <step>
+            <position>previousInput+IF0</position>
+            <tip>Add the &lt;b&gt;Hit&lt;/b&gt; block to the &lt;b&gt;if&lt;/b&gt;</tip>
+            <direction>l</direction>
+            <progressor>blockConnect+controls_if+pong_collision</progressor>
+        </step>
+        <step>
+            <position>div.blocks-tree-setters</position>
+            <tip>Now we need to set the speed</tip>
+            <direction>l</direction>
+            <progressor>buttonPress+div.blocks-tree-setters</progressor>
+        </step>
+        <step>
+            <position>g.flyout.svgBlock-pong_speedSetter</position>
+            <tip>Grab the &lt;b&gt;Speed&lt;/b&gt; block</tip>
+            <direction>l</direction>
+            <progressor>blockAdd+pong_speedSetter</progressor>
+        </step>
+        <step>
+            <position>previous^Input+DO0</position>
+            <tip>Clip the &lt;b&gt;Speed&lt;/b&gt; block to the &lt;b&gt;do&lt;/b&gt; part</tip>
+            <direction>l</direction>
+            <progressor>blockConnect+controls_if+pong_speedSetter</progressor>
+        </step>
+        <step>
+            <position>previous</position>
+            <tip>Select &lt;b&gt;Ball&lt;/b&gt; from the dropdown</tip>
+            <direction>l</direction>
+            <progressor>dropdownInputChange+ITEM+BALL</progressor>
+        </step>
+        <step>
+            <position>div.blocks-tree-numbers</position>
+            <tip>Now go to &lt;b&gt;Numbers&lt;/b&gt;</tip>
+            <direction>l</direction>
+            <progressor>buttonPress+div.blocks-tree-numbers</progressor>
+        </step>
+        <step>
+            <position>g.flyout.svgBlock-math_arithmetic</position>
+            <tip>Choose the &lt;b&gt;Math&lt;/b&gt; block for adding</tip>
+            <direction>l</direction>
+            <progressor>blockAdd+math_arithmetic</progressor>
+        </step>
+        <step>
+            <position>previousInput+NUM</position>
+            <tip>Connect it to the &lt;b&gt;Speed&lt;/b&gt; setter</tip>
+            <direction>l</direction>
+            <progressor>blockConnect+pong_speedSetter+math_arithmetic</progressor>
+        </step>
+        <step>
+            <position>div.blocks-tree-getters</position>
+            <tip>Now we need to get the current speed, so we can add 10 each time</tip>
+            <direction>l</direction>
+            <progressor>buttonPress+div.blocks-tree-getters</progressor>
+        </step>
+        <step>
+            <position>g.flyout.svgBlock-pong_speedGetter</position>
+            <tip>Grab the &lt;b&gt;Speed Getter&lt;/b&gt; block</tip>
+            <direction>l</direction>
+            <progressor>blockAdd+pong_speedGetter</progressor>
+        </step>
+        <step>
+            <position>previousInput+A</position>
+            <tip>Connect it to &lt;b&gt;add&lt;/b&gt;</tip>
+            <direction>l</direction>
+            <progressor>blockConnect+math_arithmetic+pong_speedGetter</progressor>
+        </step>
+        <step>
+            <position>previous</position>
+            <tip>Change the dropdown to &lt;b&gt;Ball&lt;/b&gt;. This will get the speed of the &lt;b&gt;Ball&lt;/b&gt; when there's a hit</tip>
+            <direction>l</direction>
+            <progressor>dropdownInputChange+ITEM+BALL</progressor>
+        </step>
+        <step>
+            <position>div.blocks-tree-numbers</position>
+            <tip>Let's connect a &lt;b&gt;Number&lt;/b&gt;, to add to the speed</tip>
+            <direction>l</direction>
+            <progressor>buttonPress+div.blocks-tree-numbers</progressor>
+        </step>
+        <step>
+            <position>g.flyout.svgBlock-math_number</position>
+            <tip>Grab a &lt;b&gt;Number&lt;/b&gt; block</tip>
+            <direction>l</direction>
+            <progressor>blockAdd+math_number</progressor>
+        </step>
+        <step>
+            <position>previous^Input+B</position>
+            <tip>Connect it to &lt;b&gt;add&lt;/b&gt;</tip>
+            <direction>l</direction>
+            <progressor>blockConnect+math_arithmetic+math_number</progressor>
+        </step>
+        <step>
+            <position>previous</position>
+            <tip>Click and type 10</tip>
+            <direction>l</direction>
+            <progressor>textInputChange+NUM+10</progressor>
+        </step>
+        <step>
+            <position>#runButton</position>
+            <tip>&lt;b&gt;Make&lt;/b&gt; it!</tip>
+            <direction>d</direction>
+            <progressor>NONE</progressor>
+        </step>
+    </project>
+    <!-- Project 15 - Huge balls -->
+    <project>
+        <step>
+            <position>div.blocks-tree-logic</position>
+            <tip>Since you've made it this far, you must be ready to make a huge ball! Grab an &lt;b&gt;if-do&lt;/b&gt;</tip>
+            <direction>l</direction>
+            <progressor>buttonPress+div.blocks-tree-logic</progressor>
+        </step>
+        <step>
+            <position>g.flyout.svgBlock-controls_if</position>
+            <tip>Grab an &lt;b&gt;if-do&lt;/b&gt;</tip>
+            <direction>l</direction>
+            <progressor>blockAdd+controls_if</progressor>
+        </step>
+        <step>
+            <position>div.blocks-tree-events</position>
+            <tip>Let's grow the ball each time there's a &lt;b&gt;Hit&lt;/b&gt;. Find the &lt;b&gt;Hit&lt;/b&gt; Event</tip>
+            <direction>l</direction>
+            <progressor>buttonPress+div.blocks-tree-events</progressor>
+        </step>
+        <step>
+            <position>g.flyout.svgBlock-pong_collision</position>
+            <tip>Grab the &lt;b&gt;Hit&lt;/b&gt; event</tip>
+            <direction>l</direction>
+            <progressor>blockAdd+pong_collision</progressor>
+        </step>
+        <step>
+            <position>previousInput+IF0</position>
+            <tip>Connect it as the &lt;b&gt;if&lt;/b&gt; condition</tip>
+            <direction>l</direction>
+            <progressor>blockConnect+controls_if+pong_collision</progressor>
+        </step>
+        <step>
+            <position>div.blocks-tree-setters</position>
+            <tip>Now, we need to set the size of the ball</tip>
+            <direction>l</direction>
+            <progressor>buttonPress+div.blocks-tree-setters</progressor>
+        </step>
+        <step>
+            <position>g.flyout.svgBlock-pong_ballSizeSetter</position>
+            <tip>Choose the &lt;b&gt;Ball Size&lt;/b&gt; setter</tip>
+            <direction>l</direction>
+            <progressor>blockAdd+pong_ballSizeSetter</progressor>
+        </step>
+        <step>
+            <position>previous^Input+DO0</position>
+            <tip>Clip the &lt;b&gt;Ball size&lt;/b&gt; setter function as the &lt;b&gt;do&lt;/b&gt;</tip>
+            <direction>l</direction>
+            <progressor>blockConnect+controls_if+pong_ballSizeSetter</progressor>
+        </step>
+        <step>
+            <position>div.blocks-tree-numbers</position>
+            <tip>We want to add to its size, so find the &lt;b&gt;Math&lt;/b&gt; block in Numbers</tip>
+            <direction>l</direction>
+            <progressor>buttonPress+div.blocks-tree-numbers</progressor>
+        </step>
+        <step>
+            <position>g.flyout.svgBlock-math_arithmetic</position>
+            <tip>Grab the &lt;b&gt;Math&lt;/b&gt; block for +</tip>
+            <direction>l</direction>
+            <progressor>blockAdd+math_arithmetic</progressor>
+        </step>
+        <step>
+            <position>previousInput+NUM</position>
+            <tip>Connect it to the &lt;b&gt;Size&lt;/b&gt; setter</tip>
+            <direction>l</direction>
+            <progressor>blockConnect+pong_ballSizeSetter+math_arithmetic</progressor>
+        </step>
+        <step>
+            <position>div.blocks-tree-getters</position>
+            <tip>Now we need to get the ball's current size</tip>
+            <direction>l</direction>
+            <progressor>buttonPress+div.blocks-tree-getters</progressor>
+        </step>
+        <step>
+            <position>g.flyout.svgBlock-pong_ballSizeGetter</position>
+            <tip>Grab the &lt;b&gt;Ball Size&lt;/b&gt; getter</tip>
+            <direction>l</direction>
+            <progressor>blockAdd+pong_ballSizeGetter</progressor>
+        </step>
+        <step>
+            <position>previousInput+A</position>
+            <tip>Plug this into the &lt;b&gt;add&lt;/b&gt;</tip>
+            <direction>l</direction>
+            <progressor>blockConnect+math_arithmetic+pong_ballSizeGetter</progressor>
+        </step>
+        <step>
+            <position>div.blocks-tree-numbers</position>
+            <tip>Now find a &lt;b&gt;Number&lt;/b&gt; to increase the size by</tip>
+            <direction>l</direction>
+            <progressor>buttonPress+div.blocks-tree-numbers</progressor>
+        </step>
+        <step>
+            <position>g.flyout.svgBlock-math_number</position>
+            <tip>Grab a &lt;b&gt;Number&lt;/b&gt; block</tip>
+            <direction>l</direction>
+            <progressor>blockAdd+math_number</progressor>
+        </step>
+        <!-- Reset -->
+        <step>
+            <position>previous^Input+B</position>
+            <tip>Plug into &lt;b&gt;add&lt;/b&gt;</tip>
+            <direction>l</direction>
+            <progressor>blockConnect+math_arithmetic+math_number</progressor>
+        </step>
+        <step>
+            <position>previous</position>
+            <tip>Choose a value</tip>
+            <direction>l</direction>
+            <progressor>textInputChange+math_number+NUM+!==0</progressor>
+        </step>
+        <step>
+            <position>div.blocks-tree-logic</position>
+            <tip>This ball will grow forever! We need another &lt;b&gt;if-do&lt;/b&gt;, to reset the ball when there's a goal</tip>
+            <direction>l</direction>
+            <progressor>buttonPress+div.blocks-tree-logic</progressor>
+        </step>
+        <step>
+            <position>g.flyout.svgBlock-controls_if</position>
+            <tip>Choose the &lt;b&gt;if-do&lt;/b&gt; block for our reset condition</tip>
+            <direction>l</direction>
+            <progressor>blockAdd+controls_if</progressor>
+        </step>
+        <step>
+            <position>div.blocks-tree-events</position>
+            <tip>Now we need the &lt;b&gt;Event&lt;/b&gt; that triggers the &lt;b&gt;if&lt;/b&gt;</tip>
+            <direction>l</direction>
+            <progressor>buttonPress+div.blocks-tree-events</progressor>
+        </step>
+        <step>
+            <position>g.flyout.svgBlock-pong_goal</position>
+            <tip>Grab the &lt;b&gt;Goal&lt;/b&gt; block</tip>
+            <direction>l</direction>
+            <progressor>blockAdd+pong_goal</progressor>
+        </step>
+        <step>
+            <position>previousInput+IF0</position>
+            <tip>Connect it as the &lt;b&gt;if&lt;/b&gt; condition</tip>
+            <direction>l</direction>
+            <progressor>blockConnect+controls_if+pong_goal</progressor>
+        </step>
+        <step>
+            <position>previous</position>
+            <tip>Select &lt;b&gt;Either&lt;/b&gt; from the dropdown, so it will be activated if either player scores</tip>
+            <direction>l</direction>
+            <progressor>dropdownInputChange+PLAYER+EITHER</progressor>
+        </step>
+        <step>
+            <position>div.blocks-tree-setters</position>
+            <tip>Click on &lt;b&gt;Setters&lt;/b&gt;</tip>
+            <direction>l</direction>
+            <progressor>buttonPress+div.blocks-tree-setters</progressor>
+        </step>
+        <step>
+            <position>g.flyout.svgBlock-pong_ballSizeSetter</position>
+            <tip>Grab the &lt;b&gt;Ball Size&lt;/b&gt; setter</tip>
+            <direction>l</direction>
+            <progressor>blockAdd+pong_ballSizeSetter</progressor>
+        </step>
+        <step>
+            <position>previous^Input+DO0</position>
+            <tip>Add to the conditional as the &lt;b&gt;do&lt;/b&gt;</tip>
+            <direction>l</direction>
+            <progressor>blockConnect+controls_if+pong_ballSizeSetter</progressor>
+        </step>
+        <step>
+            <position>div.blocks-tree-numbers</position>
+            <tip>Now let's decide what &lt;b&gt;Number&lt;/b&gt; to reset the size to</tip>
+            <direction>l</direction>
+            <progressor>buttonPress+div.blocks-tree-numbers</progressor>
+        </step>
+        <step>
+            <position>g.flyout.svgBlock-math_number</position>
+            <tip>Grab a &lt;b&gt;Number&lt;/b&gt; block</tip>
+            <direction>l</direction>
+            <progressor>blockAdd+math_number</progressor>
+        </step>
+        <step>
+            <position>previousInput+NUM</position>
+            <tip>Connect to the &lt;b&gt;Setter&lt;/b&gt;</tip>
+            <direction>l</direction>
+            <progressor>blockConnect+pong_ballSizeSetter+math_number</progressor>
+        </step>
+        <step>
+            <position>previous</position>
+            <tip>Change to 15</tip>
+            <direction>l</direction>
+            <progressor>textInputChange+NUM+15</progressor>
+        </step>
+        <step>
+            <position>#runButton</position>
+            <tip>&lt;b&gt;Make&lt;/b&gt; it!</tip>
+            <direction>d</direction>
+            <progressor>NONE</progressor>
+        </step>
+    </project>
+    <!-- Project 16 - 2 player -->
+    <project>
+        <step>
+            <position>div.blocks-tree-logic</position>
+            <tip>You're a pong programming pro. Let's make 2-player mode! Click &lt;b&gt;Logic&lt;/b&gt;</tip>
+            <direction>l</direction>
+            <progressor>buttonPress+div.blocks-tree-logic</progressor>
+        </step>
+        <step>
+            <position>g.flyout.svgBlock-controls_if</position>
+            <tip>Let's make a conditional for moving the paddle up. Grab an &lt;b&gt;if-do&lt;/b&gt;</tip>
+            <direction>l</direction>
+            <progressor>blockAdd+controls_if</progressor>
+        </step>
+        <step>
+            <position>div.blocks-tree-events</position>
+            <tip>We want a key press to trigger upward movement. Find it in &lt;b&gt;Events&lt;/b&gt;</tip>
+            <direction>l</direction>
+            <progressor>buttonPress+div.blocks-tree-events</progressor>
+        </step>
+        <step>
+            <position>g.flyout.svgBlock-pong_keyPressed</position>
+            <tip>Grab the &lt;b&gt;Key Pressed&lt;/b&gt; block</tip>
+            <direction>l</direction>
+            <progressor>blockAdd+pong_keyPressed</progressor>
+        </step>
+        <step>
+            <position>previousInput+IF0</position>
+            <tip>Plug it into the &lt;b&gt;if&lt;/b&gt;</tip>
+            <direction>l</direction>
+            <progressor>blockConnect+controls_if+pong_keyPressed</progressor>
+        </step>
+        <step>
+            <position>div.blocks-tree-actions</position>
+            <tip>Now we need the move the paddle if the key is pressed. We need an &lt;b&gt;Action&lt;/b&gt;</tip>
+            <direction>l</direction>
+            <progressor>buttonPress+div.blocks-tree-actions</progressor>
+        </step>
+        <step>
+            <position>g.flyout.svgBlock-pong_movePaddleTwo</position>
+            <tip>Grab the &lt;b&gt;Move Paddle&lt;/b&gt; block</tip>
+            <direction>l</direction>
+            <progressor>blockAdd+pong_movePaddleTwo</progressor>
+        </step>
+        <!-- Again -->
+        <step>
+            <position>previous^Input+DO0</position>
+            <tip>Add this to &lt;b&gt;do&lt;/b&gt;</tip>
+            <direction>l</direction>
+            <progressor>blockConnect+controls_if+pong_movePaddleTwo</progressor>
+        </step>
+        <step>
+            <position>div.blocks-tree-logic</position>
+            <tip>Halfway there! Now let's make the 'go down' condition: click on &lt;b&gt;Logic&lt;/b&gt;</tip>
+            <direction>l</direction>
+            <progressor>buttonPress+div.blocks-tree-logic</progressor>
+        </step>
+        <step>
+            <position>g.flyout.svgBlock-controls_if</position>
+            <tip>Grab another &lt;b&gt;if-do&lt;/b&gt;</tip>
+            <direction>l</direction>
+            <progressor>blockAdd+controls_if</progressor>
+        </step>
+        <step>
+            <position>div.blocks-tree-events</position>
+            <tip>Go to &lt;b&gt;Events&lt;/b&gt;</tip>
+            <direction>l</direction>
+            <progressor>buttonPress+div.blocks-tree-events</progressor>
+        </step>
+        <step>
+            <position>g.flyout.svgBlock-pong_keyPressed</position>
+            <tip>Grab the &lt;b&gt;Key Pressed&lt;/b&gt; block</tip>
+            <direction>l</direction>
+            <progressor>blockAdd+pong_keyPressed</progressor>
+        </step>
+
+        <step>
+            <position>previousInput+IF0</position>
+            <tip>Connect to the condition</tip>
+            <direction>l</direction>
+            <progressor>blockConnect+controls_if+pong_keyPressed+</progressor>
+        </step>
+        <step>
+            <position>previous</position>
+            <tip>Select S from the dropdown. The S key will trigger the 'go down' condition</tip>
+            <direction>l</direction>
+            <progressor>dropdownInputChange+CHAR+S</progressor>
+        </step>
+        <step>
+            <position>div.blocks-tree-actions</position>
+            <tip>Now we need the &lt;b&gt;Action&lt;/b&gt; that moves the paddle</tip>
+            <direction>l</direction>
+            <progressor>buttonPress+div.blocks-tree-actions</progressor>
+        </step>
+
+        <step>
+            <position>g.flyout.svgBlock-pong_movePaddleTwo</position>
+            <tip>Grab the &lt;b&gt;Move Paddle&lt;/b&gt; block</tip>
+            <direction>l</direction>
+            <progressor>blockAdd+pong_movePaddleTwo</progressor>
+        </step>
+
+        <step>
+            <position>previous^Input+DO0</position>
+            <tip>Add it to into &lt;b&gt;do&lt;/b&gt;</tip>
+            <direction>l</direction>
+            <progressor>blockConnect+controls_if+pong_movePaddleTwo</progressor>
+        </step>
+        <step>
+            <position>previous</position>
+            <tip>Select Down as its direction from the dropdown</tip>
+            <direction>l</direction>
+            <progressor>dropdownInputChange+DIRECTION+DOWN</progressor>
+        </step>
+        <step>
+            <position>#runButton</position>
+            <tip>Click &lt;b&gt;Make&lt;/b&gt; and get ready to challenge someone!</tip>
+            <direction>d</direction>
+            <progressor>NONE</progressor>
+        </step>
+    </project>
+</level>
